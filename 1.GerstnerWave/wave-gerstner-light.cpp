@@ -1,20 +1,10 @@
-/****************************************************************************/
-/*	Render water surface using Gerstner waves	*/
-/*	with textures, VAO and normal calculating.	*/
-/*	Author:	John Hany	*/
-/*	Updated version can be downloaded from:		*/
-/*		https://github.com/johnhany/OpenGLProjects	*/
-/*	You can read my blog about the code in:		*/
-/*		http://johnhany.net/2014/02/water-rendering-with-gerstner-wave/	*/
-
-#include <stdafx.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <gl/glew.h>
 #ifdef __APPLE__
 #  include <gl/glut.h>
 #else
-#  include <freeglut/freeglut.h>
+#  include <freeglut.h>
 #endif
 #include <glm/vec3.hpp>
 #include <glm/vec4.hpp>
@@ -190,8 +180,8 @@ static GLuint initShader(GLenum type, const char *filename)
 
 static void installShaders(void)
 {
-	names.vertex_shader = initShader(GL_VERTEX_SHADER, "wave-vs.glsl");
-	names.fragment_shader = initShader(GL_FRAGMENT_SHADER, "wave-fs.glsl");
+	names.vertex_shader = initShader(GL_VERTEX_SHADER, "wave-gerstner-light-vs.glsl");
+	names.fragment_shader = initShader(GL_FRAGMENT_SHADER, "wave-gerstner-light-fs.glsl");
 
 	GLint program_ok;
 	names.program = glCreateProgram();

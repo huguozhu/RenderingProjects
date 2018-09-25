@@ -18,6 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="water-texture-2-normal.tga" />
+    <Image Include="water-texture-2.tga" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wave-gerstner-light-fs.glsl" />
+    <None Include="wave-gerstner-light-vs.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="wave-gerstner-light.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="util.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D9E11F29-AE21-49A5-AD16-F5A08B5C3F3C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -88,10 +103,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../external/glew/include;../external;../external/freeglut/include/gl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../external/freeglut/lib;../external/glew/lib/release/win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
