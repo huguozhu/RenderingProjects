@@ -180,8 +180,8 @@ static GLuint initShader(GLenum type, const char *filename)
 
 static void installShaders(void)
 {
-	names.vertex_shader = initShader(GL_VERTEX_SHADER, "wave-gerstner-light-vs.glsl");
-	names.fragment_shader = initShader(GL_FRAGMENT_SHADER, "wave-gerstner-light-fs.glsl");
+	names.vertex_shader = initShader(GL_VERTEX_SHADER, "../media/1.GerstnerWave/wave-gerstner-light-vs.glsl");
+	names.fragment_shader = initShader(GL_FRAGMENT_SHADER, "../media/1.GerstnerWave/wave-gerstner-light-fs.glsl");
 
 	GLint program_ok;
 	names.program = glCreateProgram();
@@ -419,11 +419,11 @@ static void initGL(void)
 	names.attributes.normal = glGetAttribLocation(names.program, "normal");
 	glGenBuffers(1, &names.normal_buffer);
 
-	names.diffuse_texture = initTexture("water-texture-2.tga");
+	names.diffuse_texture = initTexture("../media/1.GerstnerWave/water-texture-2.tga");
 	names.uniforms.diffuse_texture = glGetUniformLocation(names.program, "textures[0]");
 	glUniform1i(names.uniforms.diffuse_texture, 0);
 
-	names.normal_texture = initTexture("water-texture-2-normal.tga");
+	names.normal_texture = initTexture("../media/1.GerstnerWave/water-texture-2-normal.tga");
 	names.uniforms.normal_texture = glGetUniformLocation(names.program, "textures[1]");
 	glUniform1i(names.uniforms.normal_texture, 1);
 

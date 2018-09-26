@@ -19,24 +19,34 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="util.cpp" />
-    <ClCompile Include="wave-gerstner-light.cpp" />
+    <ClInclude Include="noise.h" />
+    <ClInclude Include="plane.h" />
+    <ClInclude Include="point.h" />
+    <ClInclude Include="texmanager.h" />
+    <ClInclude Include="text.h" />
+    <ClInclude Include="texture.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="util.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Noise.cpp" />
+    <ClCompile Include="plane.cpp" />
+    <ClCompile Include="point.cpp" />
+    <ClCompile Include="texmanager.cpp" />
+    <ClCompile Include="text.cpp" />
+    <ClCompile Include="texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\media\1.GerstnerWave\water-texture-2-normal.tga" />
-    <Image Include="..\media\1.GerstnerWave\water-texture-2.tga" />
+    <Image Include="..\media\2.WaterCausticsSnell\MURO_2.tga" />
+    <Image Include="..\media\2.WaterCausticsSnell\sky.tga" />
+    <Image Include="..\media\2.WaterCausticsSnell\sky3.tga" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\media\1.GerstnerWave\wave-gerstner-light-fs.glsl" />
-    <None Include="..\media\1.GerstnerWave\wave-gerstner-light-vs.glsl" />
+    <None Include="..\media\2.WaterCausticsSnell\textures.dat" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D9E11F29-AE21-49A5-AD16-F5A08B5C3F3C}</ProjectGuid>
+    <ProjectGuid>{18F2D7F5-B638-4369-896E-86EF6D18181C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My1GerstnerWave</RootNamespace>
+    <RootNamespace>My2WaterCausticsSnell</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -44,7 +54,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -104,13 +114,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../external/glew/include;../external;../external/freeglut/include/gl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../external/glew/include;../external;../external/freeglut/include/gl</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../external/freeglut/lib;../external/glew/lib/release/win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glew32.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../external/freeglut/lib;../external/glew/lib/release/win32;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;freeglut.lib;opengl32.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

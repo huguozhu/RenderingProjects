@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="text.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="noise.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="plane.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="point.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="texmanager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Noise.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="plane.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="point.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="texmanager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="text.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="texture.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\media\2.WaterCausticsSnell\sky.tga">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="..\media\2.WaterCausticsSnell\sky3.tga">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="..\media\2.WaterCausticsSnell\MURO_2.tga">
+      <Filter>res</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\media\2.WaterCausticsSnell\textures.dat">
+      <Filter>res</Filter>
+    </None>
+  </ItemGroup>
+</Project>
